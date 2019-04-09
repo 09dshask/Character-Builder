@@ -8,9 +8,13 @@ class Wizard extends Character{
 		mana = 100;
 	}
 
-	public Wizard(String name, boolean enemy, int health, int mana){
+	public Wizard(String name, boolean enemy){
 		super(name, enemy);
-		this.health = health;
-		this.mana = mana;
+		this.health = 100;
+		this.mana = 200;
+	}
+
+	public String conjure(){
+		return(name + " conjured a thing.");
 	}
 }
