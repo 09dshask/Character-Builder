@@ -9,17 +9,19 @@ class Wizard extends Character{
 		super();
 		health = 100;
 		mana = 100;
-		inventory = new Inventory<Item>();
+		inventory = new ArrayList<Item>();
 	}
 
 	public Wizard(String name, boolean enemy){
 		super(name, enemy);
 		this.health = 100;
 		this.mana = 200;
-		inventory = new Inventory<Item>();
+		inventory = new ArrayList<Item>();
 	}
 
-	public String conjure(){
-		return(name + " conjured a thing.");
+	public Item conjure(){
+		Item conjuredItem = new Item("Conjured Thing", 10);
+		inventory.add(conjuredItem);
+		return conjuredItem;
 	}
 }
