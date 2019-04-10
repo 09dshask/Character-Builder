@@ -1,6 +1,9 @@
+import java.util.ArrayList;
+
 class Character{
 	public String name;
 	public boolean enemy;
+	public ArrayList<Item> inventory;
 
 	public Character(){
 		name = "Willis";

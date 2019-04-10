@@ -4,6 +4,8 @@ public class Driver{
 		Alchemist alch = new Alchemist("David", false);
 		System.out.println(willis);
 		System.out.println(alch);
-		System.out.println(alch.transmute());
+		Item item1 = new Item("Gem", 250);
+		alch.inventory.add(item1);
+		System.out.println(alch.inventory.get(0).name);
 	}
 }
