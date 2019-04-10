@@ -19,9 +19,8 @@ class Wizard extends Character{
 		inventory = new ArrayList<Item>();
 	}
 
-	public Item conjure(){
+	public void conjure(){
 		Item conjuredItem = new Item("Conjured Thing", 10);
-		inventory.add(conjuredItem);
-		return conjuredItem;
+		this.inventory.add(conjuredItem);
 	}
 }

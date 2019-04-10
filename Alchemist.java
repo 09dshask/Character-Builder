@@ -19,7 +19,10 @@ class Alchemist extends Character{
 		inventory = new ArrayList<Item>();
 	}
 
-	public String transmute(){
-		return(name + " transmuted a thing.");
+	public void transmute(Item item1, Item item2){
+		Item transmutedItem = new Item("Gemmed Staff", 500);
+		inventory.remove(item1);
+		inventory.remove(item2);
+		inventory.add(transmutedItem);
 	}
 }

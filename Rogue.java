@@ -8,18 +8,21 @@ class Rogue extends Character{
 	public Rogue(){
 		super();
 		health = 100;
-		mana = 100;
-		inventory = new Inventory<Item>();
+		stamina = 100;
+		inventory = new ArrayList<Item>();
 	}
 
 	public Rogue(String name, boolean enemy){
 		super(name, enemy);
 		this.health = 100;
 		this.stamina = 100;
-		inventory = new Inventory<Item>();
+		inventory = new ArrayList<Item>();
 	}
 
-	public String counterfeit(){
-		return(name + " couterfeit a thing.");
+	public void counterfeit(Item item){
+		String newName = item.name;
+		int newValue = item.value;
+		Item newItem = new Item("Counterfeit " + newName, newValue);
+		this.inventory.add(newItem);
 	}
 }
