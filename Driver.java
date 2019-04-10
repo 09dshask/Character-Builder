@@ -11,8 +11,9 @@ public class Driver{
 		Item item2 = new Item("Staff", 50);
 		alch.inventory.add(item1);
 		alch.inventory.add(item2);
+		System.out.println(alch.name + " has " + alch.inventory.size() + " items: " + alch.inventory.get(0).name + " and " + alch.inventory.get(1).name + " before transmute");
 		alch.transmute(item1, item2);
-		System.out.println(alch.name + " has " + alch.inventory.size() + " items: " + alch.inventory.get(0).name);
+		System.out.println(alch.name + " has " + alch.inventory.size() + " items: " + alch.inventory.get(0).name + " after transmute");
 
 		wiz.inventory.add(item1);
 		wiz.conjure();
